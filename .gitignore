@@ -1,0 +1,5 @@
+vendor/
+phpunit.xml
+clover.xml
+.php_cs.cache
+.phpunit.result.cache

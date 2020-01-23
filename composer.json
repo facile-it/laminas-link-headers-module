@@ -1,0 +1,66 @@
+{
+    "name": "facile-it/laminas-link-headers-module",
+    "type": "library",
+    "description": "Laminas module to push Link headers for resourcers added with HeadLink view helper",
+    "homepage": "https://github.com/facile-it/laminas-link-headers-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Vargiu",
+            "email": "thomas.vargiu@facile.it"
+        }
+    ],
+    "keywords": [
+        "zend",
+        "zend framework",
+        "laminas",
+        "http2",
+        "link",
+        "header",
+        "performance",
+        "assets",
+        "preload",
+        "prefetch"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laminas": {
+            "component": "Facile\\LaminasLinkHeadersModule"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "psr/container": "^1.0",
+        "laminas/laminas-eventmanager": "^3.0",
+        "laminas/laminas-http": "^2.5.4",
+        "laminas/laminas-modulemanager": "^2.7.1",
+        "laminas/laminas-mvc": "^3.0",
+        "laminas/laminas-stdlib": "^3.1",
+        "laminas/laminas-view": "^2.6.7",
+        "laminas/laminas-servicemanager": "^3.0.3",
+        "container-interop/container-interop": "^1.2"
+    },
+    "require-dev": {
+        "facile-it/facile-coding-standard": "^0.3.1",
+        "laminas/laminas-config": "^2.6.0 || ^3.0",
+        "laminas/laminas-dependency-plugin": "^1.0",
+        "laminas/laminas-test": "^3.1",
+        "phpunit/phpunit": "^7.5.20 || ^8.5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Facile\\LaminasLinkHeadersModule\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Facile\\LaminasLinkHeadersModule\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix --diff"
+    }
+}
