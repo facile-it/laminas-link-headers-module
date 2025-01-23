@@ -10,6 +10,7 @@ use Psr\Container\ContainerInterface;
 class OptionsConfigFactoryTest extends TestCase
 {
     use ProphecyTrait;
+
     public function testInvoke(): void
     {
         $config = [

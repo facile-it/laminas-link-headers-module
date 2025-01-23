@@ -6,9 +6,10 @@ namespace Facile\LaminasLinkHeadersModule\Functional;
 
 use Facile\LaminasLinkHeadersModule\Options;
 use Facile\LaminasLinkHeadersModule\OptionsInterface;
-use function implode;
 use Laminas\ServiceManager\ServiceManager;
 use Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
+
+use function implode;
 
 class FunctionalTest extends AbstractHttpControllerTestCase
 {

@@ -12,6 +12,7 @@ use Psr\Container\ContainerInterface;
 class StylesheetHandlerFactoryTest extends TestCase
 {
     use ProphecyTrait;
+
     public function testInvoke(): void
     {
         $container = $this->prophesize(ContainerInterface::class);

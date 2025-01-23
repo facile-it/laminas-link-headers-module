@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Facile\LaminasLinkHeadersModule\Listener;
 
-use function array_filter;
 use Facile\LaminasLinkHeadersModule\OptionsInterface;
-use function get_object_vars;
 use Laminas\Http\PhpEnvironment\Response;
 use Laminas\Mvc\MvcEvent;
 use Laminas\View\Helper\HeadLink;
+
+use function array_filter;
+use function get_object_vars;
 
 final class StylesheetHandler extends AbstractLinkHandler
 {
@@ -75,11 +76,7 @@ final class StylesheetHandler extends AbstractLinkHandler
     }
 
     /**
-     * Whether the link is valid to be injected in headers
-     *
-     * @param array $attributes
-     *
-     * @return bool
+     * Whether the link is valid to be injected in headers.
      */
     private function canInjectLink(array $attributes): bool
     {

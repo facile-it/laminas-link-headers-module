@@ -5,7 +5,6 @@ namespace Facile\LaminasLinkHeadersModule\Listener;
 use ArrayIterator;
 use Facile\LaminasLinkHeadersModule\OptionsInterface;
 use Prophecy\PhpUnit\ProphecyTrait;
-use function implode;
 use Laminas\Http\Header\GenericMultiHeader;
 use Laminas\Http\Header\HeaderInterface;
 use Laminas\Http\Headers;
@@ -18,9 +17,12 @@ use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use stdClass;
 
+use function implode;
+
 class StylesheetHandlerTest extends TestCase
 {
     use ProphecyTrait;
+
     public function testInvokeWithAnotherResponse(): void
     {
         $headLink = $this->prophesize(HeadLink::class);
@@ -291,11 +293,6 @@ class StylesheetHandlerTest extends TestCase
         $injector($event->reveal());
     }
 
-    /**
-     * @param array $properties
-     *
-     * @return stdClass
-     */
     private function createStdClass(array $properties): stdClass
     {
         $item = new stdClass();

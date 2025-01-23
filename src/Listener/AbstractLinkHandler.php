@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace Facile\LaminasLinkHeadersModule\Listener;
 
-use function addslashes;
-use function array_map;
 use ArrayIterator;
-use function count;
-use function implode;
-use function in_array;
-use function iterator_to_array;
 use Laminas\Http\Header\GenericMultiHeader;
 use Laminas\Http\Header\HeaderInterface;
 use Laminas\Http\Header\HeaderValue;
 use Laminas\Http\PhpEnvironment\Response;
+
+use function addslashes;
+use function array_map;
+use function count;
+use function implode;
+use function in_array;
+use function iterator_to_array;
 use function sprintf;
 use function strtolower;
 
@@ -31,12 +32,9 @@ abstract class AbstractLinkHandler implements LinkHandlerInterface
     ];
 
     /**
-     * Get the attribute string for the header
+     * Get the attribute string for the header.
      *
-     * @param string $name
      * @param string $value
-     *
-     * @return string
      */
     protected function getAttributeForHeader(string $name, $value): string
     {
@@ -50,11 +48,7 @@ abstract class AbstractLinkHandler implements LinkHandlerInterface
     }
 
     /**
-     * Returns the link header
-     *
-     * @param array $attributes
-     *
-     * @return string
+     * Returns the link header.
      */
     protected function createLinkHeaderValue(array $attributes): string
     {
@@ -70,7 +64,6 @@ abstract class AbstractLinkHandler implements LinkHandlerInterface
     }
 
     /**
-     * @param Response $response
      * @param string[] $values
      */
     protected function addLinkHeader(Response $response, array $values): void

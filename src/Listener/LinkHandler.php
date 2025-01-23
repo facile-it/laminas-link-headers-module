@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace Facile\LaminasLinkHeadersModule\Listener;
 
 use Facile\LaminasLinkHeadersModule\OptionsInterface;
-use function get_object_vars;
-use function in_array;
 use Laminas\Http\PhpEnvironment\Response;
 use Laminas\Mvc\MvcEvent;
 use Laminas\View\Helper\HeadLink;
+
+use function get_object_vars;
+use function in_array;
 
 final class LinkHandler extends AbstractLinkHandler
 {
@@ -64,11 +65,7 @@ final class LinkHandler extends AbstractLinkHandler
     }
 
     /**
-     * Whether the link is valid to be injected in headers
-     *
-     * @param array $attributes
-     *
-     * @return bool
+     * Whether the link is valid to be injected in headers.
      */
     private function canInjectLink(array $attributes): bool
     {
