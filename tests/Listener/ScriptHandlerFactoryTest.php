@@ -6,10 +6,12 @@ use Facile\LaminasLinkHeadersModule\OptionsInterface;
 use Laminas\View\Helper\HeadScript;
 use Laminas\View\HelperPluginManager;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Container\ContainerInterface;
 
 class ScriptHandlerFactoryTest extends TestCase
 {
+    use ProphecyTrait;
     public function testInvoke(): void
     {
         $container = $this->prophesize(ContainerInterface::class);

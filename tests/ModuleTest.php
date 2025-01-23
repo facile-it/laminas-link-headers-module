@@ -7,10 +7,13 @@ use Laminas\EventManager\EventManagerInterface;
 use Laminas\Mvc\Application;
 use Laminas\Mvc\MvcEvent;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Container\ContainerInterface;
 
 class ModuleTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testOnBootstrapAllEnabled(): void
     {
         $event = $this->prophesize(MvcEvent::class);

@@ -4,10 +4,12 @@ namespace Facile\LaminasLinkHeadersModule\Service;
 
 use Facile\LaminasLinkHeadersModule\Options;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Container\ContainerInterface;
 
 class OptionsConfigFactoryTest extends TestCase
 {
+    use ProphecyTrait;
     public function testInvoke(): void
     {
         $config = [
